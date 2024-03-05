@@ -20,9 +20,7 @@ ul{
     padding: 0px;
     list-style: disc inside;
     color: rgb(179, 205, 186);
-}
-ul li{
-    display: inline-block;
+    margin-bottom: 0rem;
 }
 body{
     display: flex;
@@ -33,7 +31,7 @@ header{
     display: flex;
     flex-direction: row;
     justify-content: center;
-    background-color: #2e3436;
+    background-color: #0a182e;
     width: 100%;
     min-height: 100vh;
 }
@@ -46,13 +44,17 @@ h2{
 }
 h3{
     color: rgb(179, 205, 186);
+    font-size: 1.2rem;
+
 }
 footer{
     width: 100%;
     background-color: #b1b2b5;
     text-align: center;
-    padding-top: 14px;
-    padding-bottom: 14px;
+    padding-top: 5px;
+}
+.header_list{
+    display: inline-block;
 }
 .button{
     padding-top: 6%;
@@ -81,7 +83,7 @@ footer{
     width: calc(100% * 8/9);
 }
 .dashed-line{
-    background-image: linear-gradient(to right, #3bf95b 30%, rgba(255, 255, 255, 0) 0%);
+    background-image: linear-gradient(to right, #66ffdb 30%, rgba(255, 255, 255, 0) 0%);
     background-position: left;
     background-size: 80px 8px;
     background-repeat: repeat-x;
@@ -89,7 +91,7 @@ footer{
     padding: 20px;
 }
 .gallery{
-    background-color: #2e3436;
+    background-color: #0a182e;
     display: flex;
     flex-direction: row;
     height: auto; 
@@ -125,26 +127,33 @@ footer{
     width: 100%;
 }
 .about-me{
-    background-color: #191c1e;
+    background-color: #0a182e;
     display: flex;
     align-items: center;
     min-height: 70vh;
 }
-.aboutme-elements h1{
-    width:  calc(100% * 1/12);
+.about-me h1{
+    width:  calc(100% * 2/12);
+    font-size: 2rem;
+    text-decoration: underline;
+    text-decoration-color: #66ffdb;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 16px;
+
 }
 .about-me .aboutme-box{
     width:  calc(100% * 6/12);
-    background-color: #2e3436;
+    background-color: #e2e8f0;
 }
 .aboutme-box h3{
     padding: 25px;
+    color: #0a182e;
 }
 .aboutme-box h3::first-letter{
     initial-letter: 3;
 }
 .contact{
-    background-color: #191c1e;
+    background-color: #0a182e;
     display: flex;
     flex-direction: row;
     height: 20%;
@@ -175,19 +184,25 @@ footer{
     padding: 20px;
 }
 
+.centered {
+    width:fit-content;
+    position: absolute;
+    bottom: 0%;
+    left: 50%;
+    transform: translate(-100%, -50%);
+    color: #0a182e;
+    background-color: #ffffffd6;
+    padding: 1%;
+    filter: drop-shadow(0px 10px 4px #5f676e6b);  } 
+
 .popup{
     flex-direction: column;
     position: fixed;
     justify-content: center;
     z-index: 101;
-    padding-top: 2.5vh;
-    padding-bottom: 2.5vh;
-    padding-left: 2.5%;
-    padding-right: 2.5%;
     width: fit-content;
-    max-width: 75%;
     height: fit-content;
-    background-color: #2e3436;
+    background-color: #000000;
     display: none;
     align-items: center;
     left: 50%;
@@ -196,7 +211,7 @@ footer{
 }
 
 .popup img{
-    max-width:70vw;
+    max-width:75vw;
     
 }
 
@@ -204,13 +219,9 @@ footer{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    background-color: #191c1e;
+    background-color: #0a182e;
 }
 #proj1{
-    opacity: 0;
-    transition: opacity 0.7s;
-}
-#proj2{
     opacity: 0;
     transition: opacity 0.7s;
 }
@@ -222,26 +233,31 @@ footer{
     background-color: #00000000;
 }
 .title{
+    text-decoration: underline;
+    text-decoration-color: #66ffdb;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 16px;
     position: absolute;
-    font-size: 2.5rem;
-    padding-top: 2%;
+    font-size: 3rem;
+    padding-top: 2rem;
     padding-left: calc(100vw * 1/12);
 }
 .projectbox{
     display: flex;
     flex-direction: row;
 }
-.projectbox .back{
-    background-color: #ffffff60;
-    padding: 1.5vw;
-    border-radius: 10px;
+.projectbox .right{
+    padding-left: calc(100vw * 1/12);
+}
+.projectbox .left{
+    padding-right: calc(100vw * 1/12);
 }
 .project .right{
-    width: calc((100vw * 7/12) - 3vw);
+    width: calc((100vw * 5/12) - 3vw);
 }
 
 .project .left{
-    width: calc((100vw * 7/12) - 3vw);
+    width: calc((100vw * 5/12) - 3vw);
 }
 
 .project h3{
@@ -252,9 +268,13 @@ footer{
     flex-direction: column;
     padding-left: calc(100% * 1/12);
     padding-right: calc(100% * 1/12);
+    justify-content:space-evenly;
 }
 .description{
     color: aliceblue;
+}
+#Projetos{
+    background-color: #0a182e;
 }
 #closebehind{
     position: fixed;
@@ -265,7 +285,8 @@ footer{
     z-index: 100;
 }
 
-@media (max-width: 660px)
+
+@media (max-width: 1200px)
 {
     .half-header{
         width: calc(100% * 10/12);
@@ -279,16 +300,9 @@ footer{
     .projectbox{
         display: flex;
         flex-direction:column;
-    }
-    .project .right{
         width: 100%;
-    }
-    
-    .project .left{
-        width: 100%;
-    }
-    #proj2{
-        flex-direction:column-reverse;
+        padding-left: 0;        
+
     }
     .projectbox .back{
     width: calc(100% * 10/12 - 3vw);
@@ -301,6 +315,11 @@ footer{
         width: 40vw;
         border-radius: 20px;
     }
+    .aboutme-elements{
+        flex-direction: column;
+        width: 100%;
+    }
+
 
     .about-me .aboutme-box{
         width:  calc(100% * 10/12);
@@ -324,5 +343,7 @@ footer{
         margin-left: calc(100% * 5/12);
         width: calc(100% * 2/12);
     }
-
+    .aboutme-elements h1{
+        margin-left: calc(100% * 1/12);   
+    }
 }

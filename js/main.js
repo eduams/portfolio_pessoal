@@ -9,7 +9,7 @@ var pop;
 function proj1() {
   var element = document.getElementById("proj1");
   if (document.body.scrollTop > (window.innerHeight * 0.5) || document.documentElement.scrollTop > (window.innerHeight * 0.5 )) {
-    for(i=0;i<=7;i++){
+    for(i=0;i<=6;i++){
         element.style.opacity = "1";
     }
   }
@@ -18,22 +18,22 @@ function proj1() {
 function proj2() {
   var element = document.getElementById("proj2");
   if (document.body.scrollTop > (window.innerHeight * 1.5) || document.documentElement.scrollTop > (window.innerHeight * 1.5 )) {
-    for(i=0;i<=7;i++){
+    for(i=0;i<=6;i++){
         element.style.opacity = "1";
     }
   }
 }
 
 function gallery() {
-  if (document.body.scrollTop > (window.innerHeight * 2.4) || document.documentElement.scrollTop > (window.innerHeight * 2.4)) {
-    for(i=0;i<=7;i++){
+  if (document.body.scrollTop > (window.innerHeight * 1.4) || document.documentElement.scrollTop > (window.innerHeight * 1.4)) {
+    for(i=0;i<=6;i++){
         elements[i].style.opacity = "1";
     }
   }
 }
 
 function galleryonhover(pic){
-  for(i = 0; i <=7; i++){
+  for(i = 0; i <=6; i++){
     elements[i].style.width = '100%';
     elements[i].style.height = '100%';
     elements[i].style.margin = '0%';
@@ -48,7 +48,7 @@ function galleryonhover(pic){
 }
 
 function gallerymouseleave(){
-  for(i = 0; i <=7; i++){
+  for(i = 0; i <=6; i++){
     elements[i].style.width = '100%';
     elements[i].style.height = '100%';
     elements[i].style.margin = '0%';

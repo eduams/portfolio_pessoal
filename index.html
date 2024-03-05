@@ -3,21 +3,22 @@
  <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Page Title</title>
+    <title>Portfolio</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel='stylesheet' type='text/css' media='screen' href='css/main.css'>
- </head>
+ 
+</head>
  <body>
     <canvas id="canvas"></canvas>
     <div id="closebehind" onclick="closepopup()">
-        <img class="icon" src="img/icons8-close-48.png">
     </div>
 
     <div class="popup" id="popup0">
         <div class="imgs">
             <img src="img/motion.png">
         </div>
-        <h3>
+        <h3 class="centered">
             Landing page de um app de controle de estoque produzido em disciplina do curso de Análise e Desenvolvimento de Sistemas.
         </h3>
     </div>
@@ -25,9 +26,7 @@
         <div class="imgs">
             <img src="img/lineup.png">
         </div>
-        <h3>
-            Line-Up - plataforma para criação de e-commerce (em desenvolvimento).
-        </h3>    
+        <h3 class="centered"> Line-Up - plataforma para criação de e-commerce (em desenvolvimento).</h3>    
     </div>
 
     </div>
@@ -35,49 +34,42 @@
         <div class="imgs">
             <img src="img/netflix-clone.png">
         </div>
-        <h3>Tarefa realizada para a disciplina de Desenvolvimento Web no curso de Análise e desenvolvimento de Sistemas.
-            Basicamente o popular exercício de desenvolvimento web de clonar a página inicial do Netflix, mas nesse caso com o uso da API do TMDB. Foi uma maneira
-            interessante de exercitar a implementação de uma página web responsiva, preparada também para mobile.</h3>    </div>
+        <h3 class="centered">Tarefa realizada para a disciplina de Desenvolvimento Web no curso de Análise e desenvolvimento de Sistemas.
+            Basicamente o popular exercício de desenvolvimento web de clonar a página inicial do Netflix, mas nesse caso com o uso da API do TMDB.</h3>    </div>
     </div>
     <div class="popup" id="popup3">
         <div class="imgs">
-            <img src="img/notes.png">
+            <img src="img/blockframe-personagens.png">
         </div>
-        <h4>
-        </h4>    </div>
+        <h3 class="centered">
+            Página do projeto de um processo seletivo, que consistia no uso de uma API de personagens
+            para exibir personagens aleatórios da série Rick and Morty com o uso de ReactJS e Laravel.
+        </h3>    
     </div>
     <div class="popup" id="popup4">
         <div class="imgs">
             <img src="img/gameproofofconcept.png">
         </div>
-        <h3>
+        <h3 class="centered">
             Um projeto no Unity em estágios iniciais de desenvolvimento. Embora atualmente eu não tenha planos de finalizar o projeto,
             ele foi esssencial para eu amadurecer como programador. Não utilizei nenhum asset, o que foi um grande desafio.
         </h3>   
     </div>
     <div class="popup" id="popup5">
         <div class="imgs">
-            <img src="img/3dmodel.png">
+            <img src="img/notes.png">
         </div>
-        <h3>
-            Modelo 3D low-poly do meu projeto no Unity.
+        <h3 class="centered">
+            Aplicativos para lembretes. Permite criação e remoção de lembretes, assim como a criação de grupos de lembretes.
         </h3>   
     </div>
     <div class="popup" id="popup6">
         <div class="imgs">
             <img src="img/pontorelatorio.png">
         </div>
-        <h3>
+        <h3 class="centered">
             Aplicação para geração de tabela de pontos de funcionários. Ele lê o arquivo AFD da máquina de ponto eletrônico e retorna uma tabela com as entradas e saídas do funcionário.
         </h3>   
-    </div>
-    <div class="popup" id="popup7">
-        <div class="imgs">
-            <img src="img/Sem título2.png">
-        </div>
-        <h3>
-            Solução desenvolvida em meu estágio no Departamento Regional de Saúde XVI Sorocaba.
-        </h3>    
     </div>
     </div>
 
@@ -94,17 +86,20 @@
                     <h1>Eduardo Alves </h1>
                     <h3>Desenvolvedor</h3>
                     <ul>
-                        <li>Javascript |</li>
-                        <li>Java |</li>
-                        <li>NodeJS</li>
+                        <li class="header_list">Javascript |</li>
+                        <li class="header_list">Java |</li>
+                        <li class="header_list">NodeJS</li>
                     </ul>
                 </div>
                 <div class="dashed-line"></div>
                 <div>
                     <h3 class="description">
                         Sou formado em Ciências Biológicas pela UFSCar Sorocaba e cursando Análise e Desenvolvimento de Sistemas na Facens, em transição de carreira para a área de TI. 
-                        No momento, me encontro interessado em estudar tecnologias relacionadas ao front-end. Além disso, também tenho interesse na área de Visão Computacional. 
+                        No momento, me encontro interessado em estudar tecnologias relacionadas ao front-end.
                     </h3>
+                    <a href="#Projetos"><button class="btn btn-outline-info">Projetos</button></a>
+                    <a href="#about-me"><button class="btn btn-outline-info">Sobre mim</button></a>
+    
                 </div>
                 <div></div>
                 <div></div>    
@@ -114,53 +109,80 @@
 
         </div>
     </header>
-    <section class="projects">
-        <div class="project">
-            <div id="proj1" class="projectbox">
-                <div class="back">
-                    <img src="img/motion.png" class="right">
-                </div>
-                <div class="aboutproject">
-                    <h1>Motion</h1>
-                    <h3>
-                        Sistema responsável pela administração de entrada e saída de estoques, projetado para ser usado tanto em pequenos e grandes negócios. 
-                    </h3>    
+    <section id="Projetos" class="carousel slide" data-ride="carousel">
+        <h1 class="title">Projetos</h1>
+
+        <ol class="carousel-indicators">
+            <li data-target="#Projetos" data-slide-to="0" class="active"></li>
+            <li data-target="#Projetos" data-slide-to="1"></li>
+        </ol>
+            <div class="carousel-item active">
+                <div class="project">
+                    <div id="proj1" class="projectbox">
+                        <img src="img/motion.png" class="right">
+                        <div class="aboutproject">
+                            <h1>Motion</h1>
+                            <h3>
+                                Sistema responsável pela administração de entrada e saída de estoques, projetado para ser usado tanto em pequenos e grandes negócios. 
+                            </h3>   
+                            <div>                    
+                                <h3>Detalhes</h3>
+                                <ul>
+                                    <li>Atualização fácil do estoque do comércio</li>
+                                    <li>Layout fácil e amigável</li>
+                                </ul>
+                            </div> 
+                        </div>
+                    </div>
+                </div>        
+            </div>
+            <div class="carousel-item">
+                <div class="project">
+                    <div class="projectbox">
+                        <img src="img/lineup.png" class="right">
+                        <div class="aboutproject">
+                            <h1>LineUp</h1>
+                            <h3>
+                                Ferramenta para criação de e-commerce (em desenvolvimento) com o uso de banco de dados MongoDB.
+                            </h3>   
+                            <div>                    
+                                <h3>Detalhes</h3>
+                                <ul>
+                                    <li>Permite que o responsável por um comércio online possa ter sua própria página web personalizada</li>
+                                    <li>API de pagamentos já implementada e integrada</li>
+                                </ul>
+                            </div> 
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="project">
-            <div id="proj2" class="projectbox">
-                <div class="aboutproject">
-                    <h1>NotesJS</h1>
-                    <h3>
-                        Web app de notas, produzido como um exercício para fazer um app sem o uso de nenhuma
-                        framework. Fiz uma versão que funciona localmente, salvando as notas nos cookies do navegador,
-                        e outra com o uso do Node.js, que salvaria as notas em um servidor. Abaixo, disponibilizo
-                        a versão que salva as notas localmente.
-                    </h3>    
-                </div>
-                <div class="back">
-                    <img src="img/notes.png" class="left">
-                </div>
-            </div>
-        </div>
+            <a class="carousel-control-prev" href="#Projetos" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Anterior</span>
+              </a>
+              <a class="carousel-control-next" href="#Projetos" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Próximo</span>
+              </a>
     </section>
     <section class="gallery">
         <div class="gallery-box"><img src="img/motion.png" class="gallery-pic" onmouseleave="gallerymouseleave()" onmouseover="galleryonhover(0)" onclick="showpopup(0)"></div>
         <div class="gallery-box"><img src="img/lineup.png" class="gallery-pic" onmouseleave="gallerymouseleave()" onmouseover="galleryonhover(1)" onclick="showpopup(1)"></div>
         <div class="gallery-box"><img src="img/netflix-clone.png" class="gallery-pic" onmouseleave="gallerymouseleave()" onmouseover="galleryonhover(2)" onclick="showpopup(2)"></div>
-        <div class="gallery-box"><img src="img/notes.png" class="gallery-pic" onmouseleave="gallerymouseleave()" onmouseover="galleryonhover(3)" onclick="showpopup(3)"></div>
+        <div class="gallery-box"><img src="img/blockframe-personagens.png" class="gallery-pic" onmouseleave="gallerymouseleave()" onmouseover="galleryonhover(3)" onclick="showpopup(3)"></div>
         <div class="gallery-box"><img src="img/gameproofofconcept.png" class="gallery-pic" onmouseleave="gallerymouseleave()" onmouseover="galleryonhover(4)" onclick="showpopup(4)"></div>
-        <div class="gallery-box"><img src="img/3dmodel.png" class="gallery-pic" onmouseleave="gallerymouseleave()" onmouseover="galleryonhover(5)" onclick="showpopup(5)"></div>
+        <div class="gallery-box"><img src="img/notes.png" class="gallery-pic" onmouseleave="gallerymouseleave()" onmouseover="galleryonhover(5)" onclick="showpopup(5)"></div>
         <div class="gallery-box"><img src="img/pontorelatorio.png" class="gallery-pic" onmouseleave="gallerymouseleave()" onmouseover="galleryonhover(6)" onclick="showpopup(6)"></div>
-        <div class="gallery-box"><img src="img/Sem título2.png" class="gallery-pic" onmouseleave="gallerymouseleave()" onmouseover="galleryonhover(7)" onclick="showpopup(7)"></div>
     </section>
-    <section class="about-me">
+    <section id="about-me" class="about-me">
         <div class="aboutme-elements">
             <h1>Sobre mim:</h1>
             <div class="aboutme-box">
                 <h3 class="description">
-                    teste
+                    <p>Após concluir minha graduação em Bacharel em Ciências Biológicas pela UFSCar Sorocaba, embarquei em uma jornada de aprendizado contínuo ao ingressar no curso de Tecnologia em Análise e Desenvolvimento de Sistemas na Facens. Esta transição representou não apenas uma mudança de área, mas também uma expansão de horizontes, onde pude explorar minha paixão pela tecnologia e pela segurança cibernética.
+                    </p>
+                    <p>Durante minha trajetória acadêmica, tenho dedicado tempo e esforço para aprimorar minhas habilidades em desenvolvimento de software, especialmente com foco em desenvolvimento web. Compreendo a importância de criar soluções robustas e seguras para os desafios contemporâneos enfrentados no mundo digital.
+                    </p>                                        
                 </h3>
             </div>    
         </div>
@@ -183,16 +205,16 @@
                 <h3>
                     Linkedin - <a href="https://www.linkedin.com/in/eduardoams/">@eduardoams</a>
                 </h3>
-                <h3>
-                    Twitter - <a href="https://twitter.com/eduams1">@eduams</a>
-                </h3>    
             </ul>
         </div>
     </section>
     <footer>
-        <h4>Copyright © 2023 | Eduardo Alves</h4>
+        <h6>Copyright © 2024 | Eduardo Alves</h6>
     </footer>
  </body>
- <script src='js/main.js'></script>
+ <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<script src='js/main.js'></script>
 
  </html>
